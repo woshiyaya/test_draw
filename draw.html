@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="./css/draw.css">
     <link rel="stylesheet" href="./css/prize_rule.css">
     <style>
-        /* body{
-            background-color: rgba(0, 0, 0, .8);
-        } */
+       
     </style>
 </head>
 <body>
     <!-- 临时点击按钮演示 -->
     <div class="click_btn"></div>
     <div class="mask" ></div>
-    <!-- 抽奖主体区域,不包含关闭按钮 -->
+    <div class="mask1" ></div>
+    <!-- 抽奖主体区域,包含关闭按钮 -->
     <div class="main">
        <!-- 背景图片 -->
        <img src="./img/draw_bg .png" alt="">
@@ -82,7 +81,7 @@
 <script>
 // 点击按钮的时候遮罩层和内容显示
     $('.click_btn').click(function(){
-        $('.mask,.main').fadeIn();
+        $('.mask,.main').show();
     })
     
 // 立即抽奖指针
@@ -107,22 +106,20 @@ $('.g-lottery-box').children('.playbtn').click(function(){
 
 
 
-//点击关闭按钮隐藏 
+//点击抽奖关闭按钮隐藏 
 $('.close').click(function(){
     $('.mask,.main').hide();
 })
 
 // 点击活动规则
 $('.rule').click(function(){
-    $('.mask').show();
+    $('.mask1').show();
     $('#alert').slideDown(1000);
 })
 $('.rule_close').click(function(){
     $('#alert').slideUp();
-    $('.mask').hide()
+    $('.mask1').hide()
     })
-
-
 
 // <!-- 转盘转动 -->
 
