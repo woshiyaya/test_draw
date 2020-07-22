@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖页面</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/draw.css">
+    <link rel="stylesheet" href="./css/prize_rule.css">
+    <style>
+        /* body{
+            background-color: rgba(0, 0, 0, .8);
+        } */
+    </style>
+</head>
+<body>
+    <!-- 临时点击按钮演示 -->
+    <div class="click_btn"></div>
+    <div class="mask" ></div>
+    <!-- 抽奖主体区域,不包含关闭按钮 -->
+    <div class="main">
+       <!-- 背景图片 -->
+       <img src="./img/draw_bg .png" alt="">
+       <!-- 当前拥有U币值 -->
+       <div class="tip">
+            <ul>
+              <li></li>
+              <li>当前拥有：</li>
+              <li><b class="num">0</b>U币</li>
+            </ul>
+       </div>
+       <!-- 转盘区域 -->
+       <div class="g-content">
+        <div class="g-lottery-box">
+            <div class="g-lottery-img"></div>
+            <a class="playbtn" href="javascript:;" title="开始抽奖"></a>
+        </div>
+       </div>
+       <!-- 立即兑换 -->
+       <div class="exchange default_exchange">
+           立即兑换
+       </div>
+       <!-- 当前拥有机会 -->
+       <div class="chance">
+        您当前拥有<b>1</b>次机会
+       </div>
+       <!-- 活动规则 -->
+       <div class="rule">活动规则</div>
+        <!-- 关闭按钮 -->
+        <div class="close">
+            <img src="./img/draw_close.png" alt="">
+        </div>
+    </div>
+
+    <!-- 抽奖规则弹框 -->
+    <div id="alert">
+        <!-- 活动规则 -->
+        <!-- 短线 -->
+        <div class="xian"></div>
+        <!-- 活动规则 -->
+        <div class="title">活动规则</div>
+        <!-- 关闭按钮 -->
+        <div class="rule_close">
+            <img src="./img/close.png" alt="">
+        </div>
+        <!-- 内容文字 -->
+        <div class="word">
+            1.活动时间：2020年6月10日—2020年8月22日</br>
+            <span>22：00</span></br>
+            2.每人每天只有1次抽奖机会 </br>
+            3.抽奖获得的U币可用于直接支持品牌 </br>
+            4.1U币等于1投票值</br>
+        </div>
+        <!-- 网站所属 -->
+        <div class="copyright">最终活动解释权归优品牌网所有</div>
+    </div>
+
+
+
+
+<script src="./js/jquery.min.js"></script>
+<script>
+// 点击按钮的时候遮罩层和内容显示
+    $('.click_btn').click(function(){
+        $('.mask,.main').fadeIn();
+    })
+    
+// 立即抽奖指针
+$('.g-lottery-box').children('.playbtn').click(function(){
+    // 立即兑换按钮的替换
+    $('.exchange').removeClass('default_exchange').addClass('active_exchange');
+    // 盘转
+    $('.g-lottery-img').css({
+        'transform-origin':'center center',
+        'transform':'rotate(180deg)'
+    })
+    // 拥有机会
+    $('.chance').children('b').html(0)
+
+    //  点击立即兑换弹出兑换成功
+    $('.exchange').click(function(event){
+        location.href = './alert/exchange.html'
+        // console.log(1)
+    })
+})
+    
+
+
+
+//点击关闭按钮隐藏 
+$('.close').click(function(){
+    $('.mask,.main').hide();
+})
+
+// 点击活动规则
+$('.rule').click(function(){
+    $('.mask').show();
+    $('#alert').slideDown(1000);
+})
+$('.rule_close').click(function(){
+    $('#alert').slideUp();
+    $('.mask').hide()
+    })
+
+
+
+// <!-- 转盘转动 -->
+
+      
+    </script>
+</body>
+</html>

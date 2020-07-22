@@ -1,0 +1,102 @@
+/* 兑换规则弹框 */
+html,body{
+    font-family: SourceHanSansCN-Regular;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.dianji{
+    width:200px;
+    height: 200px;
+    background-color: red;
+    margin: 100px auto;
+}
+
+/* 遮罩层 */
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .7);
+  z-index: 100;
+  display: none;
+}
+#alert{
+    width: 100%;
+    height: 51.0667vw;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 101;
+    border-radius: 1.3333vw 1.3333vw 0 0;
+    display: none;
+}
+.xian{
+    width: 32.8vw;
+    height: 0.1333vw;
+    background-color: #D9000A;
+    position: absolute;
+    top: 7.4667vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.title{
+    /* width: 22.1333vw; */
+    height: 5.0667vw;
+    line-height: 5.0667vw;
+    background-color: white;
+    font-size: 5.3333vw;
+    font-family:Source Han Sans CN;
+    font-weight:bold;
+    color:rgba(211,0,9,1);
+    text-align: center;
+    margin-top: 5.0667vw;
+    margin-left: 37.0667vw;
+    position: absolute;
+    z-index: 2;
+    padding: 0 2.6667vw;
+    box-sizing: border-box;
+}
+.close{
+    position: absolute;
+    top: 4.3333vw;
+    right: 5.3333vw;
+}
+.close img{
+    width: 7vw;
+    height: 7vw;
+}
+.word{
+    height: 29.3333vw;
+    margin-left: 9.6667vw;
+    margin-top: 14.1333vw;
+    font-size: 3.7333vw;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height: 5.6vw;
+    padding-bottom: 3.3333vw;
+    box-sizing: border-box;
+    border-bottom: 0.1333vw solid #EEEEEE;
+}
+.word span{
+    display: inline-block;
+    margin-left: 21vw;
+}
+.copyright{
+    width: 53.9333vw;
+    height: 2.5333vw;
+    font-size: 2.6667vw;
+    color:rgba(153,153,153,1);
+    text-align: center;
+    line-height: 2.5333vw;
+    position: absolute;
+    /* bottom: 2.2667vw; */
+    top: 46.2667vw;
+    left: 50%;
+    transform: translateX(-50%);
+}

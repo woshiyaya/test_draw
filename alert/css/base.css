@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  /* 遮罩层的高度自适应，遮罩层制作 */
+  html,
+  body {
+    font-family: SourceHanSansCN-Regular;
+  }

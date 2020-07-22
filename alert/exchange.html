@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兑换成功</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/exchange.css">
+</head>
+<body>
+    <div class="mask"></div>
+    <div class="main">
+        <!-- 背景图片 -->
+        <img src="./img/exchange_bg.png" alt="">
+        <!-- company公司内容区域-->
+        <!--图片展示区域  -->
+        <div class="company_img">
+            <img src="./img/3.jpg" alt="">
+        </div>
+        <!-- 公司名称 -->
+        <div class="company_name">丽宏</div>
+        <!-- 票数 -->
+        <div class="company_ticket"><span>5658776 </span>票</div>
+        <!-- 点线 -->
+        <div class="line"></div>
+        <!-- 兑换时间 -->
+        <div class="time">兑换时间：<span></span><span></span><span></span></div>
+        <!-- 知道了 -->
+        <div class="know">
+            知道了
+        </div>
+        <!-- 关闭按钮-->
+        <div class="close">
+            <!-- <img src="./img/exchange_close.png" alt=""> -->
+        </div>
+        
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        // 获取目前的时间
+        let date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes()< 10 ? ('0' + date.getMinutes()) : date.getMinutes();
+        let seconds = date.getSeconds()< 10 ? ('0' + date.getSeconds()) : date.getSeconds();
+
+        $('.time').children().eq(0).html(hours+'时');
+        $('.time').children().eq(1).html(minutes+'分');
+        $('.time').children().eq(2).html(seconds+'秒');
+
+        $('.know ,.close').click(function(){
+            $('body').hide()
+        })
+        
+
+
+    </script>
+</body>
+</html>

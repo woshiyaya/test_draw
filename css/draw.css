@@ -1,0 +1,169 @@
+/* 临时点击按钮的演示 */
+.click_btn{
+   width: 26.6667vw;
+   height: 26.6667vw;
+   background-color: blue;
+}
+
+/* 抽奖 */
+/* 遮罩层 */
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: -1;
+    display: none;
+  }
+
+
+.main{
+    width: 86.6667vw;
+    height: 125.3333vw;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.main img{
+    width: 100%;
+}
+
+.tip,
+.g-lottery-box,
+.active_exchange,
+.chance,
+.rule,
+.close,
+.default_exchange
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 当前拥有u币值提示 */
+.tip {
+    width: 57.3333vw;
+    height: 8vw;
+    top: 11.4667vw;
+    background-color: #fff;
+    border-radius: 4vw;
+  }
+  .tip li {
+    float: left;
+  }
+  .tip li:nth-child(1) {
+    width: 5.6vw;
+    height: 5.6vw;
+    background: url(../img/draw_icon.png) no-repeat center/5.6vw;
+    margin-left: 5.3333vw;
+    margin-top: 1.2vw;
+  }
+  .tip li:nth-child(2) {
+    font-size: 4.2667vw;
+    color: #CE0407;
+    margin-left: 2.9333vw;
+    line-height: 8vw;
+  }
+  .tip li:nth-child(3) {
+    font-size: 4.5333vw;
+    color: #F9AB10;
+    line-height: 8vw;
+  }
+  /* U币值的变化 */
+  .tip li b {
+    font-weight: normal;
+    margin-right: 5px;
+  }
+
+  /* 转盘的样式 */
+
+.g-lottery-box {
+    width: 65.8533vw;
+    height: 65.8533vw;
+    top: 24.76vw;
+    background: url(../img/转盘.gif) no-repeat;
+    background-size: 100% 100%;
+    margin:0 auto;
+}
+
+.g-lottery-box .g-lottery-img {
+    width: 54.4vw;
+    height: 54.4vw;
+    /* position: absolute;
+    top: 6.1333vw;
+    left: 50%;
+    transform: translateX(-50%); */
+    margin-left: 5.6667vw;
+    margin-top: 6.08vw;
+    background: url(../img/表.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.g-lottery-box .playbtn {
+    width: 22vw;
+    height: 26vw;
+    position: absolute;
+    top: -3vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: url(../img/指针.png) no-repeat;
+    background-size: 100% 100%;
+}
+/* 立即兑换默认样式 */
+.default_exchange{
+  width: 56.6667vw;
+  height: 10.6667vw;
+  top: 95.6vw;
+  text-align: center;
+  line-height: 10.6667vw;
+  color: #FFFFFF;
+  font-size: 5.3333vw ;
+  background-color: #CCCCCC;
+  border-radius: 5.3333vw;
+}
+
+/* 立即兑换激活样式 */
+.active_exchange{
+    width: 58.4vw;
+    height: 13.3333vw;
+    top: 95.6vw;
+    text-align: center;
+    line-height: 13.3333vw;
+    background: url(../img/draw_exchange.png) no-repeat center/100%;
+    color: #FFFFFF;
+    font-size: 5.3333vw ;
+}
+
+
+/* 当前拥有机会 */
+.chance{
+    font-size: 3.7333vw;
+    color: #fff;
+    bottom: 9.3333vw;
+}
+.chance b{
+   font-weight: 400;
+   color: #FFDA0F;
+}
+/* 活动规则 */
+.rule{
+    bottom: 3.4667vw;
+    font-size: 3.2vw;
+    color: #fff;
+}
+/* 关闭按钮 */
+.close{
+   width: 6.6667vw;
+   width: 6.6667vw;
+   margin-top: 2.3333vw;
+}
+.close img{
+    width: 100%;
+}
